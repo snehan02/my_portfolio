@@ -5,6 +5,21 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 const experiences = [
     {
         role: "Software Intern",
+        company: "Shoro.ai",
+        period: "2024 - Present",
+        type: "Internship",
+        description:
+            "Collaborating on end-to-end feature development, bridging frontend design and backend services to deliver cohesive, scalable user experiences.",
+        highlights: [
+            "Designing and implementing intuitive UI/UX interfaces",
+            "Optimizing front-end performance and data rendering",
+            "Bridging frontend design and backend services for scalability",
+        ],
+        icon: "🚀",
+        color: "primary",
+    },
+    {
+        role: "Software Intern",
         company: "AI4NOCODE",
         period: "2024",
         type: "Internship",
@@ -37,17 +52,17 @@ const experiences = [
 
 export default function Experience() {
     return (
-        <section id="experience" className="section-padding bg-[#080812]">
+        <section id="experience" className="section-padding bg-[#000000]">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <p className="text-primary-400 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                    <p className="text-primary-500 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
                         Work History
                     </p>
-                    <h2 className="font-display font-bold text-4xl sm:text-5xl text-white mb-4">
+                    <h2 className="font-display font-bold text-4xl sm:text-5xl text-primary-500 mb-4">
                         Professional <span className="text-gradient">Experience</span>
                     </h2>
-                    <div className="w-16 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full" />
+                    <div className="w-16 h-1 bg-gradient-to-r from-primary-600 to-accent-500 mx-auto rounded-full" />
                 </div>
 
                 {/* Timeline */}
@@ -66,40 +81,40 @@ export default function Experience() {
 
                                 {/* Center dot */}
                                 <div className="relative flex-shrink-0 flex items-start justify-center">
-                                    <div className="relative z-10 w-16 h-16 rounded-2xl glass-card border border-primary-500/30 flex items-center justify-center text-2xl glow-blue mt-1">
+                                    <div className="relative z-10 w-16 h-16 rounded-2xl glass-card border border-primary-500/30 flex items-center justify-center text-2xl glow-gold mt-1">
                                         {exp.icon}
                                     </div>
                                 </div>
 
                                 {/* Card */}
                                 <div className={`flex-1 md:${idx % 2 === 0 ? "pl-16" : "pr-16"} pl-8 md:pl-0`}>
-                                    <div className="glass-card rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 glow-blue">
+                                    <div className="glass-card rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 glow-gold">
                                         {/* Header */}
                                         <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                                             <div>
                                                 <h3 className="font-display font-bold text-xl text-white">{exp.role}</h3>
-                                                <p className="text-primary-400 font-medium">{exp.company}</p>
+                                                <p className="text-primary-500 font-medium">{exp.company}</p>
                                             </div>
                                             <div className="flex flex-col items-end gap-1">
-                                                <span className="flex items-center gap-1.5 text-[#6060808] text-sm text-[#606080]">
+                                                <span className="flex items-center gap-1.5 text-[#606060] text-sm">
                                                     <Calendar size={13} />
                                                     {exp.period}
                                                 </span>
-                                                <span className="px-2.5 py-0.5 rounded-full bg-primary-500/15 text-primary-400 text-xs font-medium border border-primary-500/20">
+                                                <span className="px-2.5 py-0.5 rounded-full bg-primary-500/15 text-primary-500 text-xs font-medium border border-primary-500/20">
                                                     {exp.type}
                                                 </span>
                                             </div>
                                         </div>
 
                                         {/* Description */}
-                                        <p className="text-[#8080a0] text-sm leading-relaxed mb-4">
+                                        <p className="text-[#a0a0a0] text-sm leading-relaxed mb-4">
                                             {exp.description}
                                         </p>
 
                                         {/* Highlights */}
                                         <ul className="space-y-1.5">
                                             {exp.highlights.map((h) => (
-                                                <li key={h} className="flex items-start gap-2 text-[#6060a0] text-xs">
+                                                <li key={h} className="flex items-start gap-2 text-[#a0a0a0] text-xs">
                                                     <span className="mt-1 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0" />
                                                     {h}
                                                 </li>

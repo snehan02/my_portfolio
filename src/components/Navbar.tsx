@@ -9,6 +9,7 @@ const navLinks = [
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Education", href: "#education" },
+    { label: "Achievements", href: "#achievements" },
     { label: "Contact", href: "#contact" },
 ];
 
@@ -44,7 +45,7 @@ export default function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                ? "bg-[#050510]/90 backdrop-blur-md border-b border-[#1a1a30]"
+                ? "bg-[#000000]/90 backdrop-blur-md border-b border-[#1a1a1a]"
                 : "bg-transparent"
                 }`}
         >
@@ -65,8 +66,8 @@ export default function Navbar() {
                             <button
                                 onClick={() => handleNav(link.href)}
                                 className={`nav-link text-sm font-medium transition-colors ${active === link.href.slice(1)
-                                    ? "text-white active"
-                                    : "text-[#a0a0c0] hover:text-white"
+                                    ? "text-primary-500 active"
+                                    : "text-[#a0a0a0] hover:text-primary-500"
                                     }`}
                             >
                                 {link.label}
@@ -80,7 +81,7 @@ export default function Navbar() {
                 {/* Mobile hamburger */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-[#a0a0c0] hover:text-white transition-colors p-2"
+                    className="md:hidden text-[#a0a0a0] hover:text-white transition-colors p-2"
                     aria-label="Toggle menu"
                 >
                     {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -89,15 +90,15 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-[#0d0d1f]/98 backdrop-blur-xl border-b border-[#1a1a30]">
+                <div className="md:hidden bg-[#0a0a0a]/98 backdrop-blur-xl border-b border-[#1a1a1a]">
                     <ul className="px-4 py-4 space-y-1">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <button
                                     onClick={() => handleNav(link.href)}
                                     className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${active === link.href.slice(1)
-                                        ? "bg-primary-600/20 text-primary-400"
-                                        : "text-[#a0a0c0] hover:bg-white/5 hover:text-white"
+                                        ? "bg-primary-500/20 text-primary-500"
+                                        : "text-[#a0a0a0] hover:bg-primary-500/10 hover:text-primary-500"
                                         }`}
                                 >
                                     {link.label}
