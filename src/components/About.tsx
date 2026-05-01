@@ -49,7 +49,7 @@ export default function About() {
                 </div>
 
                 {/* Bio Card */}
-                <div className="glass-card rounded-2xl p-8 mb-12 glow-gold">
+                <div className="glass-card rounded-2xl p-6 sm:p-8 mb-12 glow-gold">
                     <div className="flex flex-col lg:flex-row gap-8 items-start">
                         {/* Avatar placeholder */}
                         <div className="flex-shrink-0 mx-auto lg:mx-0">

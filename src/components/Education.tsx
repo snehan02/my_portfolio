@@ -64,7 +64,7 @@ export default function Education() {
                 </div>
 
                 {/* Degree Card */}
-                <div className="glass-card rounded-2xl p-8 mb-12 glow-gold relative overflow-hidden">
+                <div className="glass-card rounded-2xl p-5 sm:p-8 mb-12 glow-gold relative overflow-hidden">
                     {/* Background decoration */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/5 rounded-full -translate-y-32 translate-x-32" />
                     <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-500/5 rounded-full translate-y-24 -translate-x-24" />
@@ -77,7 +77,7 @@ export default function Education() {
 
                         {/* Details */}
                         <div className="flex-1">
-                            <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
+                                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-2">
                                 <div>
                                     <h3 className="font-display font-bold text-xl text-white">
                                         Bachelor of Engineering — Information Science

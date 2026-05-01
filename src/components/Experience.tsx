@@ -74,7 +74,7 @@ export default function Experience() {
                         {experiences.map((exp, idx) => (
                             <div
                                 key={exp.company}
-                                className={`relative flex gap-8 md:gap-0 ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                                className={`relative flex gap-4 sm:gap-8 md:gap-0 ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
                             >
                                 {/* Left / Right content */}
                                 <div className={`hidden md:block flex-1 ${idx % 2 === 0 ? "pr-16 text-right" : "pl-16"}`} />
@@ -87,15 +87,15 @@ export default function Experience() {
                                 </div>
 
                                 {/* Card */}
-                                <div className={`flex-1 md:${idx % 2 === 0 ? "pl-16" : "pr-16"} pl-8 md:pl-0`}>
-                                    <div className="glass-card rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 glow-gold">
+                                <div className={`flex-1 md:${idx % 2 === 0 ? "pl-16" : "pr-16"} pl-6 md:pl-0`}>
+                                    <div className="glass-card rounded-2xl p-4 sm:p-6 hover:-translate-y-1 transition-all duration-300 glow-gold">
                                         {/* Header */}
-                                        <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                                        <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-3 mb-4">
                                             <div>
                                                 <h3 className="font-display font-bold text-xl text-white">{exp.role}</h3>
                                                 <p className="text-primary-500 font-medium">{exp.company}</p>
                                             </div>
-                                            <div className="flex flex-col items-end gap-1">
+                                            <div className="flex flex-col items-start sm:items-end gap-1">
                                                 <span className="flex items-center gap-1.5 text-[#606060] text-sm">
                                                     <Calendar size={13} />
                                                     {exp.period}

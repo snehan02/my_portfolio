@@ -10,7 +10,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid pt-20 pb-12 sm:pt-0 sm:pb-0"
         >
             {/* Ambient background blobs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -26,15 +26,15 @@ export default function Hero() {
 
             <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-500 text-sm font-medium mb-8">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-500 text-sm font-medium mb-8 whitespace-nowrap">
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                     Open to Work
                 </div>
 
                 {/* Name */}
-                <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl mb-4 leading-none">
+                <h1 className="font-display font-black text-4xl sm:text-7xl lg:text-8xl mb-4 leading-none">
                     <span className="text-primary-500">Hi, I'm </span>
-                    <span className="text-gradient">Sneha N.</span>
+                    <span className="text-gradient whitespace-nowrap">Sneha N.</span>
                 </h1>
 
                 {/* Titles */}
